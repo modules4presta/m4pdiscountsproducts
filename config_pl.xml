@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>m4pdiscountsproducts</name>
+    <displayName><![CDATA[Ceny objętościowe]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Umożliwia ustawienie rabat&oacute;w ilościowych na każdy produkt w oparciu o wielkość opakowania.]]></description>
+    <author><![CDATA[Modules4Presta.io]]></author>
+    <tab><![CDATA[pricing_promotion]]></tab>
+    <is_configurable>0</is_configurable>
+    <need_instance>1</need_instance>
+</module>
