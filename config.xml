@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>m4pdiscountsproducts</name>
-	<displayName><![CDATA[M4P Ceny progowe]]></displayName>
+	<displayName><![CDATA[M4P Volume Pricing]]></displayName>
 	<version><![CDATA[1.0.0]]></version>
-	<description><![CDATA[Ceny progowe per produkt: cena jednostkowa spada o stałą kwotę za każde pełne opakowanie w koszyku.]]></description>
+	<description><![CDATA[Per-product volume pricing: the unit price drops by a fixed amount for every full pack in the cart.]]></description>
 	<author><![CDATA[Modules4Presta]]></author>
 	<tab><![CDATA[pricing_promotion]]></tab>
 	<is_configurable>0</is_configurable>

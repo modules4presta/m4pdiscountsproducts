@@ -1,16 +1,11 @@
 <?php
 
 /**
- * LICENCE
+ * m4pdiscountsproducts
  *
- * ALL RIGHTS RESERVED.
- * YOU ARE NOT ALLOWED TO COPY/EDIT/SHARE/WHATEVER.
- *
- * IN CASE OF ANY PROBLEM CONTACT AUTHOR.
- *
- *  @author    Jan Kołodziej (contact@modules4presta.io)
- *  @copyright Modules4Presta.io
- *  @license   ALL RIGHTS RESERVED
+ * @author    Modules4Presta <contact@modules4presta.io>
+ * @copyright 2026 Nice Code sp. z o.o. (Modules4Presta)
+ * @license   https://opensource.org/licenses/MIT MIT License
  */
 
 if (!defined('_PS_VERSION_')) {
@@ -24,13 +19,15 @@ class M4pDiscountsProducts extends Module
         $this->name = 'm4pdiscountsproducts';
         $this->tab = 'pricing_promotion';
         $this->version = '1.0.0';
-        $this->author = 'Modules4Presta.io';
+        $this->author = 'Modules4Presta';
+        $this->need_instance = 0;
         $this->bootstrap = true;
+        $this->ps_versions_compliancy = ['min' => '1.7.6.0', 'max' => _PS_VERSION_];
 
         parent::__construct();
 
-        $this->displayName = $this->l('Volume Pricing');
-        $this->description = $this->l('Allows setting per-product volume discounts based on pack size.');
+        $this->displayName = $this->trans('Volume Pricing', [], 'Modules.M4pdiscountsproducts.Admin');
+        $this->description = $this->trans('Allows setting per-product volume discounts based on pack size.', [], 'Modules.M4pdiscountsproducts.Admin');
     }
 
     public function install()
@@ -98,16 +95,18 @@ class M4pDiscountsProducts extends Module
      */
     public function hookActionProductUpdate($params)
     {
+        if (!Tools::getIsset('volume_enabled')) {
+            return;
+        }
+
         $product = $params['product'];
         $id_product = (int)$product->id;
 
-        // Pobierz dane z formularza
         $enabled = (int)Tools::getValue('volume_enabled');
         $pack_qty = (int)Tools::getValue('volume_pack_qty');
         $pack_discount = (float)Tools::getValue('volume_pack_discount');
         $min_price = (float) Tools::getValue('volume_pack_min_price');
 
-        // Sprawdź, czy istnieje rekord
         $exists = Db::getInstance()->getValue(
             'SELECT COUNT(*) FROM `'._DB_PREFIX_.'volumepricing` WHERE id_product = '. $id_product
         );
@@ -133,7 +132,7 @@ class M4pDiscountsProducts extends Module
     /**
      * Adjust price in cart
      */
-    public function hookActionProductPriceCalculation($params)
+    public function hookActionProductPriceCalculation(&$params)
     {
         $id_product = (int)$params['id_product'];
         $qty = (int)$params['quantity'];
