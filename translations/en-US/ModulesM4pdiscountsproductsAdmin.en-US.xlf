@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="module" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="4b5a7e7f29977a1d5475b694798343f2">
+        <source>Volume Pricing</source>
+        <target>Volume Pricing</target>
+      </trans-unit>
+      <trans-unit id="d1643a438abe97bd175a7f82c3f46c63">
+        <source>Allows setting per-product volume discounts based on pack size.</source>
+        <target>Allows setting per-product volume discounts based on pack size.</target>
+      </trans-unit>
+      <trans-unit id="6b1e42295f7581358b81a7af6c04cce0">
+        <source>Remember to keep an eye on the quantity of products, because if the quantity is lower than the one entered in the “Package quantity threshold” field, the discount will not be calculated.</source>
+        <target>Remember to keep an eye on the quantity of products, because if the quantity is lower than the one entered in the “Package quantity threshold” field, the discount will not be calculated.</target>
+      </trans-unit>
+      <trans-unit id="35c7d93585b8f1c705a67f494172231c">
+        <source>Enable volume pricing</source>
+        <target>Enable volume pricing</target>
+      </trans-unit>
+      <trans-unit id="93cba07454f06a4a960172bbd6e2a435">
+        <source>Yes</source>
+        <target>Yes</target>
+      </trans-unit>
+      <trans-unit id="bafd7322c6e97d25b6299b5d6fe8920b">
+        <source>No</source>
+        <target>No</target>
+      </trans-unit>
+      <trans-unit id="3226b3d6c3cd26eca44260be115903d9">
+        <source>Pack quantity threshold</source>
+        <target>Pack quantity threshold</target>
+      </trans-unit>
+      <trans-unit id="cac1229155bea0b396c6888b6d745101">
+        <source>Enter how often you want the product price to decrease.</source>
+        <target>Enter how often you want the product price to decrease.</target>
+      </trans-unit>
+      <trans-unit id="387baa03a3693b26718fa6a2edb77f93">
+        <source>Discount per pack (in currency)</source>
+        <target>Discount per pack (in currency)</target>
+      </trans-unit>
+      <trans-unit id="4e65a761a33f21f1600e65e35e4c923c">
+        <source>The price for one unit of the product will be reduced by the specified amount for each number of packages added.</source>
+        <target>The price for one unit of the product will be reduced by the specified amount for each number of packages added.</target>
+      </trans-unit>
+      <trans-unit id="fcc653ab85a8b4c1d43de9c4f7676d4e">
+        <source>Min price per pack (in currency)</source>
+        <target>Min price per pack (in currency)</target>
+      </trans-unit>
+      <trans-unit id="23a9e6f69174b08a3979b8ffd2e814d9">
+        <source>Minimal price of product which can be after discounts.</source>
+        <target>Minimal price of product which can be after discounts.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
